@@ -1,0 +1,13 @@
+{
+  "name": "pagina-dra-betty-aguado",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "imagenes": "node scripts/optimizar-imagenes.mjs",
+    "dev": "npx --yes serve -l 8000 public",
+    "deploy": "npx --yes wrangler pages deploy public --project-name dra-betty-aguado"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}

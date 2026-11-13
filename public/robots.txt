@@ -1,0 +1,25 @@
+# Bienvenidos buscadores y asistentes de IA.
+User-agent: *
+Allow: /
+
+# Asistentes y buscadores de IA (permitidos explícitamente)
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: DuckAssistBot
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://drabettyaguado.com/sitemap.xml

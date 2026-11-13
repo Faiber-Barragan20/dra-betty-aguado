@@ -1,0 +1,21 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  X-Frame-Options: SAMEORIGIN
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+  Link: </assets/fonts/cormorant.woff2>; rel=preload; as=font; type="font/woff2"; crossorigin
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/llms.txt
+  Content-Type: text/markdown; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/llms-full.txt
+  Content-Type: text/markdown; charset=utf-8
+  Cache-Control: public, max-age=3600
