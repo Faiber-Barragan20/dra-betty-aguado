@@ -11,8 +11,8 @@ mkdirSync(OUT, { recursive: true });
 
 // nombre, anchos, recorte opcional (aspect ratio ancho/alto, foco horizontal 0..1)
 const SPECS = [
-  { name: 'hero', widths: [960, 1600, 2000] },
-  { name: 'hero-m', src: 'hero', widths: [480, 800], crop: { ratio: 4 / 5, x: 0.92 } },
+  { name: 'hero', widths: [960, 1536] },
+  { name: 'hero-m', src: 'hero', widths: [480, 800], crop: { ratio: 4 / 5, x: 0.70 } },
   { name: 'joven', widths: [480, 800] },
   { name: 'adulta', widths: [480, 800] },
   { name: 'adulto', widths: [480, 800] },

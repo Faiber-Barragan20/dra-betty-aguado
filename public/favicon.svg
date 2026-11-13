@@ -1,1 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 46"><rect x="-3" y="0" width="46" height="46" rx="10" fill="#FBF8F3"/><path fill="none" stroke="#1F5FA8" stroke-width="2.6" stroke-linecap="round" d="M20 8c-3-3-7-4-10.5-2.5C4 8 4.5 15 6.5 21c1.5 4.5 2 9 3 14 .8 4 2 7 3.8 7 2.4 0 2.7-5.5 3.7-9.5.6-2.4 1.6-3.5 3-3.5s2.4 1.1 3 3.5c1 4 1.3 9.5 3.7 9.5 1.8 0 3-3 3.8-7 1-5 1.5-9.5 3-14 2-6 2.5-13-3-15.5C27 4 23 5 20 8Z"/><path fill="none" stroke="#B8913F" stroke-width="2.2" stroke-linecap="round" d="M3 30c8-6 22-10 35-12"/><path fill="#B8913F" d="m31 2 1.2 2.8L35 6l-2.8 1.2L31 10l-1.2-2.8L27 6l2.8-1.2Z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-18 -2 156 160"><rect x="-18" y="-2" width="156" height="160" rx="30" fill="#FBF8F3"/>
+  <!-- Icono del logo: réplica vectorial aproximada del letrero de la fachada. Reemplazar por el archivo original del diseñador cuando exista. -->
+  <g transform="translate(8 0) scale(.86 1)">
+    <path fill="#EEF2F6" d="M47 50c-8-6-20-8-29-1C8 57 9 76 14 92c4 13 8 27 12 38 3 9 6 14 10 12 5-3 6-16 9-27 2-6 5-9 8-9s6 3 7 9c3 12 3 26 9 29 4 2 7-4 9-12 4-14 7-30 9-46 3-21 0-34-10-38-9-4-18-2-27 2Z"/>
+    <path fill="none" stroke="#14315C" stroke-width="5" stroke-linecap="round" d="M47 50c-8-6-20-8-29-1C8 57 9 76 14 92c4 13 8 27 12 38 2 6 4 10 6 12"/>
+    <path fill="none" stroke="#B8914A" stroke-width="4.5" stroke-linecap="round" d="M53 47c9-5 19-6 26-2 10 5 12 18 9 38-2 16-5 32-9 46-2 8-4 13-7 13"/>
+    <path fill="none" stroke="#2C79A8" stroke-width="4" stroke-linecap="round" d="M60 64c-8 8-10 22-8 38 2 16 5 30 6 43"/>
+  </g>
+  <!-- arco envolvente, con grosor variable -->
+  <path fill="#2C79A8" d="M10 142C44 136 78 116 95 93c12-16 11-31-2-36-3-1-6-1-9 0 9-1 15 4 14 13-1 8-6 16-12 23C68 115 40 134 10 142Z"/>
+  <!-- lima de endodoncia -->
+  <path fill="none" stroke="#B8914A" stroke-width="2.2" stroke-linecap="round" d="M50 47l4-17"/>
+  <rect x="50" y="11" width="7" height="19" rx="3.5" transform="rotate(14 53.5 20)" fill="#2C79A8"/>
+  <rect x="45" y="44" width="11" height="5" rx="2.5" fill="#14315C"/>
+  <!-- estela y destellos dorados -->
+  <path fill="none" stroke="#B8914A" stroke-width="2.6" stroke-linecap="round" d="M57 33c6-10 15-16 27-19M58 39c9-6 20-8 33-6"/>
+  <path fill="#B8914A" d="m78 0 2.4 6.1 6.1 2.4-6.1 2.4L78 17l-2.4-6.1-6.1-2.4 6.1-2.4Z"/>
+  <path fill="#B8914A" d="m96 25 1.5 3.6 3.6 1.5-3.6 1.5L96 35.2l-1.5-3.6-3.6-1.5 3.6-1.5Z"/>
+</svg>
