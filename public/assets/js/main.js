@@ -15,7 +15,7 @@
 
   // Aparición progresiva al hacer scroll (solo si el usuario no pidió reducir movimiento)
   if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var sel = 'main .sec .eyebrow, main .sec h2, main .sec .lead, .val, .about figure, .letter > p, .chips, .stage, .steps li, .listen > *, .place figure, .place .card, .faq details, .facts dl > div, .final .btn';
+  var sel = 'main .sec .eyebrow, main .sec h2, main .sec .lead, .val, .svc li, .endo figure, .endo h3, .endo p, .gallery li, .about figure, .letter > p, .chips, .stage, .steps li, .listen > *, .place figure, .place .card, .faq details, .facts dl > div, .final .btn';
   var els = [].slice.call(document.querySelectorAll(sel));
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) { if (e.isIntersecting) { var t = e.target; t.classList.add('in'); io.unobserve(t); setTimeout(function () { t.style.transitionDelay = ''; }, 1600); } });

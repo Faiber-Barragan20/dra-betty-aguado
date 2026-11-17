@@ -18,7 +18,11 @@ const SPECS = [
   { name: 'adulto', widths: [480, 800] },
   { name: 'mayor', widths: [480, 800] },
   { name: 'doctora', widths: [480, 800, 1100] },
-  { name: 'doctora-escucha', widths: [640, 1200] },
+  { name: 'doctora-escucha', widths: [640, 1200], crop: { ratio: 3 / 2, x: 0.5, y: 0.62 } },
+  { name: 'endodoncia', widths: [480, 800] },
+  { name: 'consultorio-sala', widths: [480, 800], crop: { ratio: 4 / 3, x: 0.5, y: 0.7 } },
+  { name: 'recepcion', widths: [480, 800] },
+  { name: 'sala-espera', widths: [480, 800] },
   { name: 'doctora-exterior', widths: [480, 800] },
   { name: 'fachada', widths: [480, 960, 1280] },
 ];
@@ -30,8 +34,10 @@ async function base(file, crop) {
   if (!crop) return img;
   const { width: w, height: h } = await img.metadata();
   const cw = Math.min(w, Math.round(h * crop.ratio));
-  const left = Math.round((w - cw) * crop.x);
-  return img.extract({ left, top: 0, width: cw, height: h });
+  const ch = Math.min(h, Math.round(cw / crop.ratio));
+  const left = Math.round((w - cw) * (crop.x ?? 0.5));
+  const top = Math.round((h - ch) * (crop.y ?? 0.5));
+  return img.extract({ left, top, width: cw, height: ch });
 }
 
 for (const s of SPECS) {

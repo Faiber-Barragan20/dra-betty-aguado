@@ -246,6 +246,23 @@ address{font-style:normal}
 .hdr .btn-wa{display:none;min-height:46px;padding:.7em 1.2em;font-size:.95rem}
 @media (min-width:1024px){.hdr .btn-wa{display:inline-flex}}
 @media (min-width:1440px){:root{--max:1280px}}
+
+.services{background:var(--ivory)}
+.svc{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:480px){.svc{grid-template-columns:repeat(2,1fr)}}
+.svc li{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px;border-top:3px solid var(--gold-l)}
+.svc li b{display:block;font:600 1.15rem/1.25 var(--serif);color:var(--navy)}
+.svc li span{display:block;font-size:.92rem;color:var(--muted);margin-top:4px;line-height:1.4}
+.endo{background:#fff}
+.endo .grid{display:grid;gap:40px;align-items:start}
+.endo figure{margin:0}
+.endo figure img{border-radius:var(--r);box-shadow:var(--shadow);width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 35%}
+.endo h3{font:600 1.35rem/1.25 var(--serif);color:var(--navy);margin:28px 0 8px}
+.endo p{margin:0 0 12px}
+.gallery{list-style:none;padding:0;margin:40px 0 0;display:grid;gap:16px}
+.gallery figure img{aspect-ratio:4/3}
+@media (min-width:768px){.svc{grid-template-columns:repeat(4,1fr)}.gallery{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:1024px){.endo .grid{grid-template-columns:5fr 6fr;gap:80px}.endo figure{position:sticky;top:96px}}
 /* ====== Movimiento ====== */
 @keyframes fadeUp{from{opacity:0;translate:0 26px}to{opacity:1;translate:0 0}}
 @keyframes heroZoom{from{scale:1.14}to{scale:1}}
@@ -303,7 +320,7 @@ address{font-style:normal}
       "geo": {"@type": "GeoCoordinates", "latitude": 4.3962362, "longitude": -76.0689651},
       "areaServed": ["Zarzal", "Roldanillo", "La Unión", "La Victoria", "Bugalagrande", "Cartago", "Tuluá", "Valle del Cauca"],
       "medicalSpecialty": ["Dentistry", "Endodontics"],
-      "knowsAbout": ["Odontología general y especializada", "Endodoncia (tratamiento de conducto)", "Atención odontológica para adultos mayores", "Atención a pacientes con miedo al odontólogo"],
+      "knowsAbout": ["Odontología general y especializada", "Endodoncia", "Periodoncia", "Cirugía oral", "Ortodoncia", "Implantes dentales", "Rehabilitación oral", "Odontología estética", "Endodoncia (tratamiento de conducto)", "Atención odontológica para adultos mayores", "Atención a pacientes con miedo al odontólogo"],
       "isAcceptingNewPatients": true,
       "currenciesAccepted": "COP",
       "paymentAccepted": "Tarjeta de crédito, tarjeta de débito, transferencia Bancolombia, Nequi",
@@ -324,6 +341,17 @@ address{font-style:normal}
       "jobTitle": "Odontóloga especialista en Endodoncia",
       "worksFor": {"@id": "https://drabettyaguado.com/#consultorio"},
       "knowsLanguage": "es",
+      "image": "https://drabettyaguado.com/assets/img/doctora-800.jpg",
+      "alumniOf": [
+        {"@type": "CollegeOrUniversity", "name": "Universidad Autónoma de Manizales"},
+        {"@type": "CollegeOrUniversity", "name": "Universidad Militar Nueva Granada"},
+        {"@type": "CollegeOrUniversity", "name": "Pontificia Universidad Javeriana"}
+      ],
+      "hasCredential": [
+        {"@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "Odontología", "recognizedBy": {"@type": "CollegeOrUniversity", "name": "Universidad Autónoma de Manizales"}},
+        {"@type": "EducationalOccupationalCredential", "credentialCategory": "Especialización", "name": "Especialización en Endodoncia", "recognizedBy": {"@type": "CollegeOrUniversity", "name": "Universidad Militar Nueva Granada"}},
+        {"@type": "EducationalOccupationalCredential", "name": "Formación en Administración en Salud", "recognizedBy": {"@type": "CollegeOrUniversity", "name": "Pontificia Universidad Javeriana"}}
+      ],
       "address": {"@type": "PostalAddress", "addressLocality": "Zarzal", "addressRegion": "Valle del Cauca", "addressCountry": "CO"}
     },
     {
@@ -342,13 +370,14 @@ address{font-style:normal}
       "isPartOf": {"@id": "https://drabettyaguado.com/#web"},
       "about": {"@id": "https://drabettyaguado.com/#consultorio"},
       "inLanguage": "es-CO",
-      "dateModified": "2026-11-12"
+      "dateModified": "2026-11-17"
     },
     {
       "@type": "FAQPage",
       "@id": "https://drabettyaguado.com/#preguntas",
       "mainEntity": [
-        {"@type":"Question","name":"¿Qué tratamientos atienden en el consultorio de la Dra. Betty Aguado?","acceptedAnswer":{"@type":"Answer","text":"Atendemos cualquier servicio de odontología, para personas de todas las edades: niños (acompañados por un adulto), jóvenes, adultos y adultos mayores. La Dra. Betty es especialista en endodoncia. Todo empieza con una valoración donde conversamos sobre tu caso y te explicamos tus opciones."}},
+        {"@type":"Question","name":"¿Qué tratamientos atienden en el consultorio de la Dra. Betty Aguado?","acceptedAnswer":{"@type":"Answer","text":"Atendemos cualquier servicio de odontología, para personas de todas las edades: niños (acompañados por un adulto), jóvenes, adultos y adultos mayores. Ofrecemos atención integral en odontología general, endodoncia, periodoncia, cirugía oral, ortodoncia, implantes dentales, rehabilitación oral y odontología estética. La Dra. Betty es especialista en endodoncia y trabaja con un equipo de profesionales para que cada tratamiento lo realice quien mejor conoce el tema. Todo empieza con una valoración donde conversamos sobre tu caso y te explicamos tus opciones."}},
+        {"@type":"Question","name":"¿Solo atienden endodoncia?","acceptedAnswer":{"@type":"Answer","text":"No. La Dra. Betty es especialista en endodoncia, pero en el consultorio un equipo de profesionales atiende odontología general, periodoncia, cirugía oral, ortodoncia, implantes dentales, rehabilitación oral y odontología estética."}},
         {"@type":"Question","name":"Me da miedo ir al odontólogo, ¿qué hago?","acceptedAnswer":{"@type":"Answer","text":"Es más común de lo que crees y no tienes que avergonzarte. Cuéntanos qué te preocupa antes de empezar: vamos a tu ritmo, te explicamos cada paso antes de hacerlo y puedes pedir una pausa cuando lo necesites."}},
         {"@type":"Question","name":"¿Cómo es la primera cita?","acceptedAnswer":{"@type":"Answer","text":"La primera cita es una valoración: conversamos, revisamos tu boca con calma y te explicamos qué encontramos y cuáles son tus opciones y su costo. Tú decides sin presión."}},
         {"@type":"Question","name":"¿Cómo agendo una cita?","acceptedAnswer":{"@type":"Answer","text":"Escríbenos por WhatsApp desde el botón verde de esta página. Necesitamos tu nombre completo, tu número de documento y un teléfono de contacto. Las citas se asignan a partir del día siguiente."}},
@@ -385,6 +414,7 @@ address{font-style:normal}
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="#conoceme">Conóceme</a>
+      <a href="#endodoncia">Endodoncia</a>
       <a href="#tu-visita">Tu visita</a>
       <a href="#consultorio">Consultorio</a>
       <a href="#preguntas">Preguntas</a>
@@ -395,6 +425,7 @@ address{font-style:normal}
   </div>
   <nav class="mnav" id="mnav" aria-label="Menú móvil">
     <a href="#conoceme">Conóceme</a>
+    <a href="#endodoncia">Endodoncia</a>
     <a href="#tu-visita">Tu visita</a>
     <a href="#consultorio">El consultorio</a>
     <a href="#preguntas">Preguntas frecuentes</a>
@@ -416,7 +447,7 @@ address{font-style:normal}
     <div class="copy">
       <span class="tag"><svg width="16" height="16" aria-hidden="true"><use href="#i-pin"/></svg>Zarzal, Valle del Cauca</span>
       <h1 id="t-hero">Un tratamiento<br> tan <span class="script">único</span> <span class="nw">como <span class="script script-2">tú</span></span></h1>
-      <p>Soy la Dra. Betty Aguado, endodoncista. Sé lo que se siente llegar con miedo. Por eso aquí vamos despacio, de la mano y sin juicios.</p>
+      <p>Soy la Dra. Betty Aguado y, junto a mi equipo, sabemos lo que se siente llegar con miedo. Por eso aquí vamos despacio, de la mano y sin juicios.</p>
       <div class="ctas">
         <a class="btn btn-wa" href="https://wa.me/573115986147?text=Hola%20Dra.%20Betty%2C%20quiero%20agendar%20una%20valoraci%C3%B3n" target="_blank" rel="noopener">Agenda tu valoración</a>
         <a class="btn btn-ghost" href="#conoceme">Conóceme</a>
@@ -451,6 +482,25 @@ address{font-style:normal}
   </div>
 </section>
 
+<!-- SERVICIOS -->
+<section class="sec services" id="servicios" aria-labelledby="t-servicios">
+  <div class="wrap">
+    <span class="eyebrow">Servicios</span>
+    <h2 id="t-servicios">Todo lo que tu sonrisa necesita, <em>en un solo lugar</em></h2>
+    <p class="lead">La Dra. Betty y su equipo de profesionales te ofrecen atención odontológica integral para toda la familia: desde una limpieza hasta un tratamiento especializado.</p>
+    <ul class="svc">
+      <li><b>Odontología general</b><span>Valoraciones, limpiezas y calzas (resinas)</span></li>
+      <li><b>Periodoncia</b><span>Encías sanas: sangrado y sensibilidad</span></li>
+      <li><b>Cirugía oral</b><span>Extracciones y cordales</span></li>
+      <li><b>Ortodoncia</b><span>Brackets y dientes alineados</span></li>
+      <li><b>Implantes dentales</b><span>Reemplaza los dientes perdidos</span></li>
+      <li><b>Rehabilitación oral</b><span>Coronas y prótesis</span></li>
+      <li><b>Odontología estética</b><span>Blanqueamiento y una sonrisa más bonita</span></li>
+      <li><b>Endodoncia</b><span>Dolor de muela y tratamiento de conducto</span></li>
+    </ul>
+  </div>
+</section>
+
 <!-- 3. CONÓCEME -->
 <section class="sec about" id="conoceme" aria-labelledby="t-conoceme">
   <div class="wrap grid">
@@ -458,17 +508,16 @@ address{font-style:normal}
       <picture>
         <source type="image/avif" srcset="assets/img/doctora-480.avif 480w, assets/img/doctora-800.avif 800w, assets/img/doctora-1100.avif 1100w" sizes="(min-width:1024px) 40vw, 100vw">
         <source type="image/webp" srcset="assets/img/doctora-480.webp 480w, assets/img/doctora-800.webp 800w, assets/img/doctora-1100.webp 1100w" sizes="(min-width:1024px) 40vw, 100vw">
-        <img src="assets/img/doctora-800.jpg" width="800" height="1000" loading="lazy" decoding="async" alt="La Dra. Betty Aguado sonriendo con su bata blanca en el consultorio, junto a orquídeas blancas">
+        <img src="assets/img/doctora-800.jpg" width="800" height="996" loading="lazy" decoding="async" alt="La Dra. Betty Aguado, endodoncista, sonriendo con su bata blanca bordada en el consultorio">
       </picture>
       <figcaption><b>Dra. Betty Milena Aguado</b>Odontóloga · Especialista en Endodoncia</figcaption>
     </figure>
     <div class="letter">
       <span class="eyebrow">Conóceme</span>
       <h2 id="t-conoceme">Hola, soy Betty.</h2>
-      <!-- TODO: completar con la historia real de la doctora (universidad, años de experiencia, por qué eligió la endodoncia). -->
-      <p>Elegí la odontología porque me encanta ver a alguien volver a sonreír sin pensarlo. Me especialicé en endodoncia, el cuidado de lo que está por dentro del diente, porque muchas veces ahí está el dolor que más asusta… y el alivio que más se agradece.</p>
-      <p>En mi consultorio, en Zarzal, atiendo a jóvenes que empiezan su vida, a adultos que van a mil y a abuelos que merecen todo el tiempo del mundo. A cada uno lo trato como me gustaría que trataran a mi familia: con paciencia, con cariño y diciendo siempre la verdad.</p>
-      <p>Si llevas tiempo aplazando tu cita, no te voy a regañar. Te voy a escuchar.</p>
+      <p>Soy odontóloga egresada de la <b>Universidad Autónoma de Manizales</b>, especialista en Endodoncia de la <b>Universidad Militar Nueva Granada</b> y con formación en Administración en Salud de la <b>Pontificia Universidad Javeriana</b>.</p>
+      <p>A lo largo de mi trayectoria profesional he desarrollado experiencia en odontología general y especializada, con especial dedicación a la endodoncia.</p>
+      <p>Hoy continúo ejerciendo mi profesión en Colombia, con el compromiso de ofrecer a cada paciente una atención personalizada, responsable y de calidad, basada en la confianza, el diagnóstico adecuado y el cuidado de su salud oral.</p>
       <p class="sign">Betty Aguado</p>
       <ul class="chips" aria-label="Lo esencial">
         <li>Endodoncista</li>
@@ -482,6 +531,29 @@ address{font-style:normal}
         <a href="#" data-red="instagram" target="_blank" rel="noopener" aria-label="Instagram de la Dra. Betty Aguado"><svg aria-hidden="true"><use href="#i-ig"/></svg>Instagram</a>
         <a href="#" data-red="facebook" target="_blank" rel="noopener" aria-label="Facebook de la Dra. Betty Aguado"><svg aria-hidden="true"><use href="#i-fb"/></svg>Facebook</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENDODONCIA -->
+<section class="sec endo" id="endodoncia" aria-labelledby="t-endo">
+  <div class="wrap grid">
+    <figure>
+      <picture>
+        <source type="image/avif" srcset="assets/img/endodoncia-480.avif 480w, assets/img/endodoncia-800.avif 800w" sizes="(min-width:1024px) 40vw, 100vw">
+        <source type="image/webp" srcset="assets/img/endodoncia-480.webp 480w, assets/img/endodoncia-800.webp 800w" sizes="(min-width:1024px) 40vw, 100vw">
+        <img src="assets/img/endodoncia-800.jpg" width="800" height="1067" loading="lazy" decoding="async" alt="La Dra. Betty Aguado realizando un tratamiento de conducto con lupas de aumento y aislamiento dental">
+      </picture>
+    </figure>
+    <div>
+      <span class="eyebrow">Mi especialidad</span>
+      <h2 id="t-endo">Endodoncia: <em>conservamos</em> tus dientes naturales</h2>
+      <h3>¿Cuándo necesitas una endodoncia?</h3>
+      <p>Puede ser necesaria si tienes dolor dental, sensibilidad persistente, sufriste un trauma, o presentas inflamación u otra molestia. En ese caso, solicita una valoración odontológica: es importante identificar la causa del problema para determinar el tratamiento adecuado. Consultar a tiempo siempre es mejor.</p>
+      <h3>¿Por qué es tan importante la endodoncia?</h3>
+      <p>Porque con este tratamiento conservamos tus dientes naturales, cuidando su salud desde el interior. La endodoncia es un tratamiento odontológico especializado que permite tratar las enfermedades o lesiones que afectan la pulpa dental: el tejido blando que se encuentra en el interior del diente y que contiene nervios y vasos sanguíneos.</p>
+      <p>Cuando la pulpa se inflama, se infecta o sufre un daño irreversible, puede ser necesario realizar un tratamiento de conductos. Este procedimiento consiste en retirar cuidadosamente el tejido pulpar afectado, limpiar y desinfectar el interior de los conductos radiculares y, posteriormente, sellarlos con materiales especiales.</p>
+      <p>Su principal objetivo es eliminar la infección, aliviar los síntomas, conservar el diente natural y devolverle su función, evitando la extracción siempre que sea posible.</p>
     </div>
   </div>
 </section>
@@ -548,7 +620,7 @@ address{font-style:normal}
       <picture>
         <source type="image/avif" srcset="assets/img/doctora-escucha-640.avif 640w, assets/img/doctora-escucha-1200.avif 1200w" sizes="(min-width:1024px) 55vw, 100vw">
         <source type="image/webp" srcset="assets/img/doctora-escucha-640.webp 640w, assets/img/doctora-escucha-1200.webp 1200w" sizes="(min-width:1024px) 55vw, 100vw">
-        <img src="assets/img/doctora-escucha-640.jpg" width="1200" height="800" loading="lazy" decoding="async" alt="La doctora riendo con una paciente de cabello plateado mientras le toma la mano y la escucha">
+        <img src="assets/img/doctora-escucha-640.jpg" width="1200" height="800" loading="lazy" decoding="async" alt="Conversación tranquila con una paciente en el consultorio antes de empezar">
       </picture>
       <blockquote>
         <p>“Lo que más me importa no es terminar rápido: es que salgas de aquí tranquilo, entendiendo todo y con ganas de volver a sonreír.”</p>
@@ -591,6 +663,11 @@ address{font-style:normal}
         </div>
       </div>
     </div>
+    <ul class="gallery" aria-label="Fotos del consultorio">
+      <li><figure><picture><source type="image/avif" srcset="assets/img/consultorio-sala-480.avif 480w, assets/img/consultorio-sala-800.avif 800w" sizes="(min-width:1024px) 33vw, 100vw"><source type="image/webp" srcset="assets/img/consultorio-sala-480.webp 480w, assets/img/consultorio-sala-800.webp 800w" sizes="(min-width:1024px) 33vw, 100vw"><img src="assets/img/consultorio-sala-800.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Sala de atención con unidad odontológica, buena iluminación y gabinetes organizados"></picture><figcaption>Sala de atención</figcaption></figure></li>
+      <li><figure><picture><source type="image/avif" srcset="assets/img/recepcion-480.avif 480w, assets/img/recepcion-800.avif 800w" sizes="(min-width:1024px) 33vw, 100vw"><source type="image/webp" srcset="assets/img/recepcion-480.webp 480w, assets/img/recepcion-800.webp 800w" sizes="(min-width:1024px) 33vw, 100vw"><img src="assets/img/recepcion-800.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Recepción amplia y luminosa del consultorio"></picture><figcaption>Recepción</figcaption></figure></li>
+      <li><figure><picture><source type="image/avif" srcset="assets/img/sala-espera-480.avif 480w, assets/img/sala-espera-800.avif 800w" sizes="(min-width:1024px) 33vw, 100vw"><source type="image/webp" srcset="assets/img/sala-espera-480.webp 480w, assets/img/sala-espera-800.webp 800w" sizes="(min-width:1024px) 33vw, 100vw"><img src="assets/img/sala-espera-800.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Sala de espera con sillas y amplio espacio"></picture><figcaption>Sala de espera</figcaption></figure></li>
+    </ul>
   </div>
 </section>
 
@@ -603,7 +680,8 @@ address{font-style:normal}
       <p class="lead">¿No encuentras tu pregunta? Escríbenos por WhatsApp, con gusto te respondemos.</p>
     </div>
     <div class="faq-list">
-      <details open><summary>¿Qué tratamientos atienden en el consultorio de la Dra. Betty Aguado?</summary><p>Atendemos cualquier servicio de odontología, para personas de todas las edades: niños (acompañados por un adulto), jóvenes, adultos y adultos mayores. La Dra. Betty es especialista en endodoncia. Todo empieza con una valoración donde conversamos sobre tu caso y te explicamos tus opciones.</p></details>
+      <details open><summary>¿Qué tratamientos atienden en el consultorio de la Dra. Betty Aguado?</summary><p>Atendemos cualquier servicio de odontología, para personas de todas las edades: niños (acompañados por un adulto), jóvenes, adultos y adultos mayores. Ofrecemos atención integral en odontología general, endodoncia, periodoncia, cirugía oral, ortodoncia, implantes dentales, rehabilitación oral y odontología estética. La Dra. Betty es especialista en endodoncia y trabaja con un equipo de profesionales para que cada tratamiento lo realice quien mejor conoce el tema. Todo empieza con una valoración donde conversamos sobre tu caso y te explicamos tus opciones.</p></details>
+      <details><summary>¿Solo atienden endodoncia?</summary><p>No. La Dra. Betty es especialista en endodoncia, pero en el consultorio un equipo de profesionales atiende odontología general, periodoncia, cirugía oral, ortodoncia, implantes dentales, rehabilitación oral y odontología estética.</p></details>
       <details><summary>Me da miedo ir al odontólogo, ¿qué hago?</summary><p>Es más común de lo que crees y no tienes que avergonzarte. Cuéntanos qué te preocupa antes de empezar: vamos a tu ritmo, te explicamos cada paso antes de hacerlo y puedes pedir una pausa cuando lo necesites.</p></details>
       <details><summary>¿Cómo es la primera cita?</summary><p>La primera cita es una valoración: conversamos, revisamos tu boca con calma y te explicamos qué encontramos y cuáles son tus opciones y su costo. Tú decides sin presión.</p></details>
       <details><summary>¿Cómo agendo una cita?</summary><p>Escríbenos por WhatsApp desde el botón verde de esta página. Necesitamos tu nombre completo, tu número de documento y un teléfono de contacto. Las citas se asignan a partir del día siguiente.</p></details>
@@ -626,7 +704,7 @@ address{font-style:normal}
     <h2 id="t-resumen">Lo que necesitas saber para dar el primer paso</h2>
     <p class="lead" style="max-width:56ch">Pensamos cada detalle para que venir al odontólogo sea fácil, cercano y sin sorpresas.</p>
     <dl>
-      <div><dt>Quién te cuida</dt><dd><b>Dra. Betty Milena Aguado</b>, odontóloga especialista en endodoncia. Te recibe, te escucha y te explica todo con calma, con palabras que se entienden.</dd></div>
+      <div><dt>Quién te cuida</dt><dd><b>Un equipo, una misma forma de cuidarte.</b> La Dra. Betty Milena Aguado, especialista en endodoncia, junto a un equipo de profesionales en distintas áreas de la odontología. Te reciben, te escuchan y te explican todo con calma, con palabras que se entienden.</dd></div>
       <div><dt>Qué hacemos por ti</dt><dd><b>Cualquier tratamiento de odontología</b>, desde lo más sencillo hasta lo especializado. Siempre empezamos con una valoración para entender tu caso y armar un plan hecho a tu medida.</dd></div>
       <div><dt>Para quién</dt><dd><b>Para toda la familia.</b> Niños (acompañados por un adulto), jóvenes, adultos y adultos mayores: cada edad tiene su sonrisa y todas merecen el mismo cariño.</dd></div>
       <div><dt>Dónde estamos</dt><dd><b>Calle 13 # 8-29, barrio Bolívar, Zarzal (Valle del Cauca).</b> Un espacio cálido y luminoso, con acceso para personas con movilidad reducida, cerca de la Universidad del Valle.</dd></div>
