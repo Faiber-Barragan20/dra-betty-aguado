@@ -52,8 +52,15 @@ for (const s of SPECS) {
   console.log('✓', s.name);
 }
 
-const hero = find('hero');
-if (hero) {
-  await sharp(hero).resize(1200, 630, { fit: 'cover', position: 'attention' }).jpeg({ quality: 80, mozjpeg: true }).toFile('public/og-image.jpg');
+// Imagen para compartir (WhatsApp, Facebook): retrato real de la doctora
+const og = find('doctora') || find('hero');
+if (og) {
+  await sharp(og).rotate().resize(1200, 630, { fit: 'cover', position: 'attention' }).jpeg({ quality: 80, mozjpeg: true }).toFile('public/og-image.jpg');
   console.log('✓ og-image.jpg');
+}
+
+// Logo en PNG para Google (no acepta SVG como logo)
+if (existsSync('public/favicon.svg')) {
+  await sharp('public/favicon.svg', { density: 600 }).resize(512, 512, { fit: 'contain', background: '#ffffff' }).flatten({ background: '#ffffff' }).png().toFile('public/assets/marca/logo-512.png');
+  console.log('✓ logo-512.png');
 }
