@@ -55,7 +55,7 @@ for (const s of SPECS) {
 // Imagen para compartir (WhatsApp, Facebook): retrato real de la doctora
 const og = find('doctora') || find('hero');
 if (og) {
-  await sharp(og).rotate().resize(1200, 630, { fit: 'cover', position: 'attention' }).jpeg({ quality: 80, mozjpeg: true }).toFile('public/og-image.jpg');
+  await sharp(og).rotate().resize(1200, 630, { fit: 'cover', position: 'attention' }).jpeg({ quality: 80, mozjpeg: true }).toFile('public/og-doctora.jpg');
   console.log('✓ og-image.jpg');
 }
 
