@@ -18,9 +18,10 @@ const SPECS = [
   { name: 'adulto', widths: [480, 800] },
   { name: 'mayor', widths: [480, 800] },
   { name: 'doctora', widths: [480, 800, 1100] },
-  { name: 'doctora-escucha', widths: [640, 1200], crop: { ratio: 3 / 2, x: 0.5, y: 0.62 } },
-  { name: 'endodoncia', widths: [480, 800] },
-  { name: 'consultorio-sala', widths: [480, 800], crop: { ratio: 4 / 3, x: 0.5, y: 0.7 } },
+  // box: recorte previo (px) para dejar por fuera el tarro rojo de residuos
+  { name: 'doctora-escucha', widths: [640, 1200], box: { left: 125, top: 0, width: 961, height: 1448 }, crop: { ratio: 3 / 2, x: 0.5, y: 0.62 } },
+  { name: 'endodoncia', widths: [480, 800], box: { left: 0, top: 0, width: 760, height: 1448 }, crop: { ratio: 4 / 5, x: 0.5, y: 0.6 } },
+  { name: 'consultorio-sala', widths: [480, 800], box: { left: 262, top: 0, width: 824, height: 1448 }, crop: { ratio: 4 / 3, x: 0.5, y: 0.7 } },
   { name: 'recepcion', widths: [480, 800] },
   { name: 'sala-espera', widths: [480, 800] },
   { name: 'doctora-exterior', widths: [480, 800] },
@@ -29,8 +30,9 @@ const SPECS = [
 
 const find = (n) => ['jpg', 'jpeg', 'png', 'webp'].map((e) => join(SRC, `${n}.${e}`)).find(existsSync);
 
-async function base(file, crop) {
+async function base(file, crop, box) {
   let img = sharp(file).rotate();
+  if (box) img = sharp(await img.extract(box).toBuffer());
   if (!crop) return img;
   const { width: w, height: h } = await img.metadata();
   const cw = Math.min(w, Math.round(h * crop.ratio));
@@ -44,7 +46,7 @@ for (const s of SPECS) {
   const file = find(s.src || s.name);
   if (!file) { console.warn(`⚠  falta ${SRC}/${s.src || s.name}.(jpg|png) — se omite`); continue; }
   for (const w of s.widths) {
-    const r = () => base(file, s.crop).then((i) => i.resize({ width: w, withoutEnlargement: false }));
+    const r = () => base(file, s.crop, s.box).then((i) => i.resize({ width: w, withoutEnlargement: false }));
     await (await r()).avif({ quality: 50, effort: 6 }).toFile(join(OUT, `${s.name}-${w}.avif`));
     await (await r()).webp({ quality: 72 }).toFile(join(OUT, `${s.name}-${w}.webp`));
     await (await r()).jpeg({ quality: 78, mozjpeg: true, progressive: true }).toFile(join(OUT, `${s.name}-${w}.jpg`));
