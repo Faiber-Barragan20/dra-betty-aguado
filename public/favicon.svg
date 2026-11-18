@@ -1,19 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-18 -2 156 160"><rect x="-18" y="-2" width="156" height="160" rx="30" fill="#FBF8F3"/>
-  <!-- Icono del logo: réplica vectorial aproximada del letrero de la fachada. Reemplazar por el archivo original del diseñador cuando exista. -->
-  <g transform="translate(8 0) scale(.86 1)">
-    <path fill="#EEF2F6" d="M47 50c-8-6-20-8-29-1C8 57 9 76 14 92c4 13 8 27 12 38 3 9 6 14 10 12 5-3 6-16 9-27 2-6 5-9 8-9s6 3 7 9c3 12 3 26 9 29 4 2 7-4 9-12 4-14 7-30 9-46 3-21 0-34-10-38-9-4-18-2-27 2Z"/>
-    <path fill="none" stroke="#14315C" stroke-width="5" stroke-linecap="round" d="M47 50c-8-6-20-8-29-1C8 57 9 76 14 92c4 13 8 27 12 38 2 6 4 10 6 12"/>
-    <path fill="none" stroke="#B8914A" stroke-width="4.5" stroke-linecap="round" d="M53 47c9-5 19-6 26-2 10 5 12 18 9 38-2 16-5 32-9 46-2 8-4 13-7 13"/>
-    <path fill="none" stroke="#2C79A8" stroke-width="4" stroke-linecap="round" d="M60 64c-8 8-10 22-8 38 2 16 5 30 6 43"/>
-  </g>
-  <!-- arco envolvente, con grosor variable -->
-  <path fill="#2C79A8" d="M10 142C44 136 78 116 95 93c12-16 11-31-2-36-3-1-6-1-9 0 9-1 15 4 14 13-1 8-6 16-12 23C68 115 40 134 10 142Z"/>
-  <!-- lima de endodoncia -->
-  <path fill="none" stroke="#B8914A" stroke-width="2.2" stroke-linecap="round" d="M50 47l4-17"/>
-  <rect x="50" y="11" width="7" height="19" rx="3.5" transform="rotate(14 53.5 20)" fill="#2C79A8"/>
-  <rect x="45" y="44" width="11" height="5" rx="2.5" fill="#14315C"/>
-  <!-- estela y destellos dorados -->
-  <path fill="none" stroke="#B8914A" stroke-width="2.6" stroke-linecap="round" d="M57 33c6-10 15-16 27-19M58 39c9-6 20-8 33-6"/>
-  <path fill="#B8914A" d="m78 0 2.4 6.1 6.1 2.4-6.1 2.4L78 17l-2.4-6.1-6.1-2.4 6.1-2.4Z"/>
-  <path fill="#B8914A" d="m96 25 1.5 3.6 3.6 1.5-3.6 1.5L96 35.2l-1.5-3.6-3.6-1.5 3.6-1.5Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -5 150 160"><rect x="-15" y="-5" width="150" height="160" rx="30" fill="#FFFFFF"/>
+  <!-- Icono del logo inspirado en la publicidad del consultorio (diente bicolor, conducto azul, lima y arco turquesa). -->
+  <defs><linearGradient id="g-canal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#47B4E6"/><stop offset="1" stop-color="#2B3AA6"/></linearGradient></defs>
+    <path fill="#F4F7FB" d="M60 42C50 36 36 34 28 40 18 48 18 66 22 82c4 16 8 34 14 50 3 8 8 8 10 0 3-14 6-28 14-28s11 14 14 28c2 8 7 8 10 0 6-16 10-34 14-50 4-16 4-34-6-42-8-6-22-4-32 2Z"/>
+    <path fill="url(#g-canal)" d="M60 54c-7 0-12 6-12 14 0 13-3 31-5 54h4c2-19 6-32 13-34 7 2 11 15 13 34h4c-2-23-5-41-5-54 0-8-5-14-12-14Z"/>
+    <path fill="none" stroke="#2B2F9E" stroke-width="5.5" stroke-linecap="round" d="M60 42C50 36 36 34 28 40 18 48 18 66 22 82c4 16 8 34 14 50 3 8 8 8 10 0 3-14 6-28 14-28"/>
+    <path fill="none" stroke="#9AA4AE" stroke-width="5.5" stroke-linecap="round" d="M60 104c8 0 11 14 14 28 2 8 7 8 10 0 6-16 10-34 14-50 4-16 4-34-6-42-8-6-22-4-32 2"/>
+    <path fill="none" stroke="#6E7884" stroke-width="2.6" stroke-linecap="round" d="M60 30v30"/>
+    <rect x="54" y="6" width="12" height="24" rx="3.5" fill="#8C96A2"/>
+    <rect x="52" y="4" width="16" height="6" rx="3" fill="#2B2F9E"/>
+    <path fill="#1FA3B7" d="M6 130c34 4 78-8 100-36 8-10 6-20-2-25 6 8 2 20-8 30-20 20-52 30-90 31Z"/>
 </svg>
